@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --blue: #0132C5;
+}
+
+@theme {
+  --color-blue: var(--blue);
+}
