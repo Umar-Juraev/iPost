@@ -62,7 +62,7 @@ export default function Header() {
 
         <a href="tel:+998951158080">+998 95 115 80 80</a>
 
-        <Dialog onOpenChange={handleOpenChange} open={true}>
+        {/* <Dialog onOpenChange={handleOpenChange} open={true}>
           <DialogTrigger asChild>
             <Button
               variant="outline"
@@ -110,7 +110,7 @@ export default function Header() {
               </Button>
             </div>
           </DialogContent>
-        </Dialog>
+        </Dialog> */}
       </section>
 
       <Carousel
