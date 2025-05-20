@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/icons/logo.svg";
 import banner1 from "@/assets/images/main-banner.webp";
+import banner2 from "@/assets/images/main-banner2.webp";
 
 import {
   Carousel,
@@ -14,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronDown } from "lucide-react";
+import { ArrowBigRight, ChevronDown } from "lucide-react";
 import { useEditorModal } from "@/hooks/use-modal";
 import { LanguageSelector } from "../ui/languageSelector";
 
@@ -36,8 +37,10 @@ export default function Header() {
   //   }));
   // };
 
+  const carouselItems = [banner1, banner2];
+
   return (
-    <header className="h-screen w-screen relative">
+    <header className="container-fluid h-screen w-screen overflow-hidden relative">
       <section className="flex justify-center items-center h-20 absolute z-10 border-b border-[#FFFFFF4D] w-full bg-[#FFFFFF1A] text-white uppercase">
         <Image src={logo} alt={""} className="mr-17" />
         <nav className="flex items-center border-r border-l border-[#ffffff4d] h-[72px]">
@@ -69,82 +72,105 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        
+
         <div className="flex items-center gap-2.5 pl-5">
-        <a href="tel:+998951158080" className="pl-5" >+998 95 115 80 80</a>
-        <Button
-          variant="outline"
-          className="border border-[#FFFFFF33] rounded-[50px] px-5 uppercase h-[42px] flex items-center gap-2.5 cursor-pointer"
-          onClick={() => {
-            showModal("", (onClose) => (
-              <div className="flex items-start gap-[140px] px-20 pt-20 pb-15">
-                <div className="w-[500px] flex flex-col gap-20">
-                  <div className="">
-                    <Label
-                      htmlFor="name"
-                      className="text-right text-[#9099A0] uppercase"
-                    >
-                      Ismingiz
-                    </Label>
-                    <Input
-                      // value={formData.name}
-                      // onChange={handleInputChange}
-                      id="name"
-                      className="col-span-3"
-                    />
+          <a href="tel:+998951158080" className="pl-5">
+            +998 95 115 80 80
+          </a>
+          <Button
+            variant="outline"
+            className="border border-[#FFFFFF33] rounded-[50px] px-5 uppercase h-[42px] flex items-center gap-2.5 cursor-pointer"
+            onClick={() => {
+              showModal("", (onClose) => (
+                <div className="flex items-start gap-[140px] px-20 pt-20 pb-15">
+                  <div className="w-[500px] flex flex-col gap-20">
+                    <div className="">
+                      <Label
+                        htmlFor="name"
+                        className="text-right text-[#9099A0] uppercase"
+                      >
+                        Ismingiz
+                      </Label>
+                      <Input
+                        // value={formData.name}
+                        // onChange={handleInputChange}
+                        id="name"
+                        className="col-span-3"
+                      />
+                    </div>
+                    <div className="">
+                      <Label
+                        htmlFor="username"
+                        className="text-right text-[#9099A0] uppercase"
+                      >
+                        Telefon raqamingiz
+                      </Label>
+                      <Input
+                        // value={formData.username}
+                        // onChange={handleInputChange}
+                        id="username"
+                        className="col-span-3"
+                      />
+                    </div>
                   </div>
-                  <div className="">
-                    <Label
-                      htmlFor="username"
-                      className="text-right text-[#9099A0] uppercase"
+                  <div className="max-w-[353px] flex flex-col">
+                    <p className="pb-7.5 font-montserrat font-medium text-4xl">
+                      Ariza qoldiring — siz bilan tez orada bog‘lanamiz
+                    </p>
+                    <p className="pb-10 font-montserrat font-normal text-lg">
+                      Aloqa ma&apos;lumotlaringizni qoldiring va bizning
+                      menejerimiz sizga ko‘proq qiziqarli tafsilotlarni aytib
+                      beradi
+                    </p>
+                    <Button
+                      type="submit"
+                      className="bg-blue rounded-none h-20 text-white text-[13.13px] font-medium cursor-pointer"
+                      onClick={() => {
+                        onClose();
+                      }}
                     >
-                      Telefon raqamingiz
-                    </Label>
-                    <Input
-                      // value={formData.username}
-                      // onChange={handleInputChange}
-                      id="username"
-                      className="col-span-3"
-                    />
+                      Ariza yuborish
+                    </Button>
                   </div>
                 </div>
-                <div className="max-w-[353px] flex flex-col">
-                  <p className="pb-7.5 font-montserrat font-medium text-4xl">
-                    Ariza qoldiring — siz bilan tez orada bog‘lanamiz
-                  </p>
-                  <p className="pb-10 font-montserrat font-normal text-lg">
-                    Aloqa ma&apos;lumotlaringizni qoldiring va bizning
-                    menejerimiz sizga ko‘proq qiziqarli tafsilotlarni aytib
-                    beradi
-                  </p>
-                  <Button
-                    type="submit"
-                    className="bg-blue rounded-none h-20 text-white text-[13.13px] font-medium cursor-pointer"
-                    onClick={() => {
-                      onClose();
-                    }}
-                  >
-                    Ariza yuborish
-                  </Button>
-                </div>
-              </div>
-            ));
-          }}
-        >
-          <span>Ariza qoldiring</span>
-          <ChevronDown
-            size={20}
-            color="white"
-            style={{
-              transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+              ));
             }}
-          />
-        </Button>
-        <LanguageSelector />
+          >
+            <span>Ariza qoldiring</span>
+            <ChevronDown
+              size={20}
+              color="white"
+              style={{
+                transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+              }}
+            />
+          </Button>
+          <LanguageSelector />
         </div>
         {modal}
       </section>
-
+      <div className="bg-blue w-screen rotate-[17deg] h-96 absolute z-20 right-60 -bottom-80"></div>
+      <div className="bg-blue w-screen -rotate-[17deg] h-96 absolute z-20 left-60 -bottom-80"></div>
+      <section className=" text-white absolute z-20 -left-1/2  transform translate-x-1/2 top-[10%]">
+        <h1 className="text-[220px] mb-22">Oson va tez!</h1>
+        <div className="flex items-start gap-72">
+          <p className="text-4xl font-medium w-[25%]">
+            iPost cargo — yukingiz biz bilan ishonchli yo‘lda!
+          </p>
+          <p className="text-[22px] font-base w-[30%]">
+            Biz – Xitoydan O‘zbekistonga tovarlar yetkazib berishga
+            ixtisoslashgan cargo kompaniyasimiz.
+          </p>
+        </div>
+        <div>
+          <Button>
+            Profilga kirish <ArrowBigRight />
+          </Button>
+          <Button>
+            trek raqam qon&apos;shish <ArrowBigRight />
+          </Button>
+        </div>
+      </section>
       <Carousel
         plugins={[plugin.current]}
         className="w-full h-full"
@@ -152,9 +178,9 @@ export default function Header() {
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {carouselItems.map((item, index) => (
             <CarouselItem key={index}>
-              <Image className="w-full object-contain" src={banner1} alt="" />
+              <Image className="w-full object-contain" src={item} alt="" />
             </CarouselItem>
           ))}
         </CarouselContent>

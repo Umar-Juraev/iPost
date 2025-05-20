@@ -8,3 +8,8 @@
 @theme {
   --color-blue: var(--blue);
 }
+
+
+.container-fluid{
+  padding: 0 50px;
+}
