@@ -32,7 +32,7 @@ type CarouselContextProps = {
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
 
-function useCarousel() {
+export function useCarousel() {
   const context = React.useContext(CarouselContext)
 
   if (!context) {
@@ -180,7 +180,8 @@ function CarouselPrevious({
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
-    <Button
+    <>
+    {/* <Button
       data-slot="carousel-previous"
       variant={variant}
       size={size}
@@ -197,7 +198,8 @@ function CarouselPrevious({
     >
       <ArrowLeft />
       <span className="sr-only">Previous slide</span>
-    </Button>
+    </Button> */}
+    </>
   )
 }
 
@@ -210,7 +212,8 @@ function CarouselNext({
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
   return (
-    <Button
+    <>
+      {/* <Button
       data-slot="carousel-next"
       variant={variant}
       size={size}
@@ -227,7 +230,8 @@ function CarouselNext({
     >
       <ArrowRight />
       <span className="sr-only">Next slide</span>
-    </Button>
+    </Button> */}
+    </>
   )
 }
 

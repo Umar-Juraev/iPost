@@ -5,15 +5,14 @@ import Service2 from "@/assets/images/service-2.png";
 import Service3 from "@/assets/images/service-3.png";
 import ArrowTopRight from "@/assets/icons/arrowTopRight.svg";
 import { Button } from "@/components/ui/button";
+import { SectionTitle } from "@/components/shared";
 
 const ServiceSection = () => {
   return (
     <section>
       <div className="w-full h-[1500px]  flex items-start justify-center bg-[url('@/assets/images/serviceBg.webp')] bg-cover bg-center">
         <div className="relative z-10 container bg-opacity-80 p-6 mt-[200px] rounded ">
-          <div className="border-b border-b-[#FFFFFF80] w-full pb-4">
-            <h3 className="text-white text-[20px] font-normal">XIZMATLAR</h3>
-          </div>
+        <SectionTitle title="Xizmatlar" mode="light"/>
           <h2 className="text-[150px] text-white font-medium leading-[110%] tracking-[-6px] mt-20">
             Siz uchun quyidagi xizmatlarni taklif etamiz
           </h2>
