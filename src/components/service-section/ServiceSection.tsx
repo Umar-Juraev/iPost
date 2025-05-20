@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import ServiceBg from "@/assets/images/serviceBg.png"
 import Service1 from "@/assets/images/service-1.png"
 import Service2 from "@/assets/images/service-2.png"
 import Service3 from "@/assets/images/service-3.png"
@@ -11,14 +10,7 @@ import { Button } from '../ui/button'
 export const ServiceSection = () => {
     return (
         <section>
-        <div className="w-full h-[1500px]  flex items-start justify-center bg-[url('@/assets/images/serviceBg.png')] bg-cover bg-center">
-            {/* <Image
-                src={ServiceBg}
-                alt="Service Background"
-                fill
-                className="absolute inset-0 z-0 object-cover"
-                quality={100}
-            /> */}
+        <div className="w-full h-[1500px]  flex items-start justify-center bg-[url('@/assets/images/serviceBg.webp')] bg-cover bg-center">
             <div className="relative z-10 container bg-opacity-80 p-6 mt-[200px] rounded ">
                 <div className='border-b border-b-[#FFFFFF80] w-full pb-4'>
                 <h3 className="text-white text-[20px] font-normal">XIZMATLAR</h3>
