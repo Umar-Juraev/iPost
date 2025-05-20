@@ -40,7 +40,7 @@ export default function Header() {
   const carouselItems = [banner1, banner2];
 
   return (
-    <header className="container-fluid h-screen w-screen overflow-hidden relative">
+    <header className=" h-screen w-screen overflow-hidden relative">
       <section className="flex justify-center items-center h-20 absolute z-10 border-b border-[#FFFFFF4D] w-full bg-[#FFFFFF1A] text-white uppercase">
         <Image src={logo} alt={""} className="mr-17" />
         <nav className="flex items-center border-r border-l border-[#ffffff4d] h-[72px]">

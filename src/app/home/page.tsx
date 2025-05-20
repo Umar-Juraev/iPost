@@ -1,11 +1,13 @@
 import { AboutUsSection, ServiceSection } from '@/section';
+import NewsSection from '@/section/NewsSection';
 import React from 'react';
 
 export default function HomePage() {
   return (
-    <div className=" mx-auto">
+    <div>
       <AboutUsSection/>
-      <ServiceSection/>
+      <ServiceSection />
+      <NewsSection/>
     </div>
   );
 } 
