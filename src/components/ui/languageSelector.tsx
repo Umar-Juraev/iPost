@@ -48,7 +48,7 @@ export function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="p-0 h-10.5 w-10.5 rounded-full border-[#FFFFFF33]"
+          className="p-0 h-10.5 w-10.5 rounded-full border-[#FFFFFF33] font-organetto text-[10px] font-light"
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.value
