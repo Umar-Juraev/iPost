@@ -1,15 +1,73 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* /// */
+
+@font-face {
+  font-family: 'Organetto';
+  src: url('/fonts/Organetto/Organetto-LightExt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Organetto';
+  src: url('/fonts/Organetto/Organetto-RegularExt.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Organetto';
+  src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+
+
 :root {
   --blue: #0132C5;
+  --blood: #AB052D;
 }
 
 @theme {
   --color-blue: var(--blue);
+  --color-blood: var(--blood);
+
+  --font-montserrat: 'Montserrat';
+  --font-organetto: 'Organetto';
 }
 
-
+body{
+  font-family: 'Montserrat';
+}
 .container-fluid{
   padding: 0 50px;
 }

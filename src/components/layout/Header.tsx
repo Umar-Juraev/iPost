@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Autoplay from "embla-carousel-autoplay";
-import { ArrowBigRight, ChevronDown } from "lucide-react";
+import { ChevronDown, MoveUpRight } from "lucide-react";
 import { useEditorModal } from "@/hooks/use-modal";
 import { LanguageSelector } from "../ui/languageSelector";
 
@@ -40,10 +40,10 @@ export default function Header() {
   const carouselItems = [banner1, banner2];
 
   return (
-    <header className="container-fluid h-screen w-screen overflow-hidden relative">
-      <section className="flex justify-center items-center h-20 absolute z-10 border-b border-[#FFFFFF4D] w-full bg-[#FFFFFF1A] text-white uppercase">
+    <header className="h-screen w-screen overflow-hidden relative">
+      <section className="flex justify-center items-center h-20 absolute z-10 border-b border-[#FFFFFF4D] w-full bg-[#FFFFFF1A] text-white uppercase font-organetto text-xs">
         <Image src={logo} alt={""} className="mr-17" />
-        <nav className="flex items-center border-r border-l border-[#ffffff4d] h-[72px]">
+        <nav className="flex items-center border-r border-l border-[#ffffff4d] h-[72px] ">
           <ul className="flex items-center px-13">
             <li>
               <Link href="/about" className="pt-4 px-5">
@@ -74,7 +74,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2.5 pl-5">
-          <a href="tel:+998951158080" className="pl-5">
+          <a href="tel:+998951158080" className="pl-5 text-sm font-light">
             +998 95 115 80 80
           </a>
           <Button
@@ -136,7 +136,7 @@ export default function Header() {
               ));
             }}
           >
-            <span>Ariza qoldiring</span>
+            <span className="text-[10px] font-light">Ariza qoldiring</span>
             <ChevronDown
               size={20}
               color="white"
@@ -151,9 +151,9 @@ export default function Header() {
       </section>
       <div className="bg-blue w-screen rotate-[17deg] h-96 absolute z-20 right-60 -bottom-80"></div>
       <div className="bg-blue w-screen -rotate-[17deg] h-96 absolute z-20 left-60 -bottom-80"></div>
-      <section className=" text-white absolute z-20 -left-1/2  transform translate-x-1/2 top-[10%]">
+      <section className=" text-white absolute z-20 -left-1/2 transform translate-x-1/2 top-[10%]">
         <h1 className="text-[220px] mb-22">Oson va tez!</h1>
-        <div className="flex items-start gap-72">
+        <div className="flex items-start gap-72 mb-14">
           <p className="text-4xl font-medium w-[25%]">
             iPost cargo — yukingiz biz bilan ishonchli yo‘lda!
           </p>
@@ -162,12 +162,14 @@ export default function Header() {
             ixtisoslashgan cargo kompaniyasimiz.
           </p>
         </div>
-        <div>
-          <Button>
-            Profilga kirish <ArrowBigRight />
+        <div className="flex gap-5">
+          <Button variant="primary">
+            <span> Profilga kirish</span>
+            <MoveUpRight />
           </Button>
-          <Button>
-            trek raqam qon&apos;shish <ArrowBigRight />
+          <Button variant="secondary">
+            <span>trek raqam qo&apos;shish</span>
+             <MoveUpRight />
           </Button>
         </div>
       </section>
