@@ -23,9 +23,13 @@
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
+    "next-qrcode": "^2.5.1",
     "postcss": "^8.5.3",
+    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-qr-code": "^2.0.15",
+    "react-qrcode-logo": "^3.0.0",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {

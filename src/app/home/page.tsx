@@ -1,5 +1,7 @@
 import { AboutUsSection, ServiceSection } from '@/section';
+import BotInfoSection from '@/section/BotInfoSection';
 import NewsSection from '@/section/NewsSection';
+import PartnersSection from '@/section/PartnersSection';
 import React from 'react';
 
 export default function HomePage() {
@@ -7,7 +9,9 @@ export default function HomePage() {
     <div>
       <AboutUsSection/>
       <ServiceSection />
-      <NewsSection/>
+      <NewsSection />
+      <PartnersSection />
+      <BotInfoSection/>
     </div>
   );
 } 
