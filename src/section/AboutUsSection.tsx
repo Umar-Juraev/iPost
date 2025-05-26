@@ -4,7 +4,7 @@ const ServiceSection = () => {
   return (
     <section className="bg-blue pt-40 pb-44">
       <div className=" container-fluid text-white">
-        <SectionTitle className="mb-20" title="Biz haqimizda"/>
+        <SectionTitle className="mb-20" title="Biz haqimizda" mode="light"/>
         <h2 className="text-[150px] -tracking-[6px] leading-[110.00000000000001%] mb-20">
           iPost Xitoy bilan O‘zbekiston orasidagi ishonchli ko‘prik!
         </h2>

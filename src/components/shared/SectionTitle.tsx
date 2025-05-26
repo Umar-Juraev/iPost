@@ -11,11 +11,11 @@ const SectionTitle: FC<Props> = ({ title, mode = "dark",className }) => {
         <div
             className={cn(
             "w-full pb-4 border-b text-2xl uppercase font-organetto",
-            isLight ? "border-b-white" : "border-b-[#FFFFFF80]",
+            isLight ? "border-b-white text-white" : "border-b-[#2B39444D] text-[#2B3944]",
             className
             )}
         >
-            <h3 className={cn("text-[20px] font-normal", "text-white")}>
+            <h3 className={cn("text-[20px] font-normal tracking-[2%]")}>
             {title}
             </h3>
         </div>
