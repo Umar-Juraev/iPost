@@ -63,11 +63,23 @@
 
   --font-montserrat: 'Montserrat';
   --font-organetto: 'Organetto';
+  --breakpoint-*: initial;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body{
   font-family: 'Montserrat';
 }
 .container-fluid{
   padding: 0 50px;
+
 }
+
+@custom-variant 3xl (@media (max-width: 1599px)); /* Applies up to 1599px */
+@custom-variant 2xl (@media (max-width: 1278px)); /* Applies up to 1399px */
+@custom-variant xl (@media (max-width: 1199px));  /* Applies up to 1199px */
+@custom-variant lg (@media (max-width: 991px));   /* Applies up to 991px */
+@custom-variant md (@media (max-width: 767px));   /* Applies up to 767px */
+@custom-variant sm (@media (max-width: 575px));   /* Applies up to 575px */
+@custom-variant xs (@media (max-width: 479px));   /* Applies up to 479px */

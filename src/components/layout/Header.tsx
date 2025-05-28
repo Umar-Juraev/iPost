@@ -3,9 +3,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/icons/logo.svg";
-import banner1 from "@/assets/images/main-banner.webp";
+import banner1 from "@/assets/images/main-banner1.webp";
 import banner2 from "@/assets/images/main-banner2.webp";
-
+import BannerBottom from "@/assets/images/bannerBottom.png"
 import {
   Carousel,
   CarouselContent,
@@ -26,7 +26,7 @@ export default function Header() {
   const [modal, showModal, isOpen] = useEditorModal();
   // const [formData, setFormData] = React.useState({
   //   name: "",
-  //   username: "",
+  //   username: "
   // });
 
   // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,50 +36,50 @@ export default function Header() {
   //     [id]: value,
   //   }));
   // };
-
+ 
   const carouselItems = [banner1, banner2];
 
   return (
-    <header className="h-screen w-screen overflow-hidden relative">
-      <section className="flex justify-center items-center h-20 absolute z-10 border-b border-[#FFFFFF4D] w-full bg-[#FFFFFF1A] text-white uppercase font-organetto text-xs">
-        <Image src={logo} alt={""} className="mr-17" />
+    <header className="relative">
+      <section className="flex justify-center items-center h-20 absolute z-10 border-b  border-[#FFFFFF4D] w-full bg-[#FFFFFF1A] text-white uppercase px-6 font-organetto 3xl:text-[11px] 2xl:text-[10px]  ">
+        <Image src={logo} alt={""} className="mr-12" />
         <nav className="flex items-center border-r border-l border-[#ffffff4d] h-[72px] ">
-          <ul className="flex items-center px-13">
+          <ul className="flex items-center px-4">
             <li>
-              <Link href="/about" className="pt-4 px-5">
+              <Link href="#about-us" className="pt-4 px-5 xl:text">
                 Biz haqimizda
               </Link>
             </li>
             <li>
-              <Link href="/services" className="pt-4 px-5">
+              <Link href="#services" className="pt-4 px-5">
                 Xizmatlar
               </Link>
             </li>
             <li>
-              <Link href="/pricing" className="pt-4 px-5">
+              <Link href="#pricing" className="pt-4 px-5">
                 Narxlar
               </Link>
             </li>
             <li>
-              <Link href="/news" className="pt-4 px-5">
+              <Link href="#news" className="pt-4 px-5">
                 Yangiliklar
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="pt-4 px-5">
+              <Link href="#contact" className="pt-4 px-5">
                 Aloqa
               </Link>
             </li>
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2.5 pl-5">
-          <a href="tel:+998951158080" className="pl-5 text-sm font-light">
+        <div className="flex items-center gap-2.5 2xl:pl-5">
+          <a href="tel:+998951158080" className="pl-5 text-nowrap font-light text-sm 3xl:text-[13px] 2xl:text-[12px] lg:text-[10px]">
             +998 95 115 80 80
           </a>
           <Button
             variant="outline"
-            className="border border-[#FFFFFF33] rounded-[50px] px-5 uppercase h-[42px] flex items-center gap-2.5 cursor-pointer"
+            className="border border-[#FFFFFF33] rounded-[50px] px-5 uppercase h-[42px] flex items-center gap-2.5 cursor-pointer 3xl:px-4 2xl:px-2 xl:px-1"
             onClick={() => {
               showModal("", (onClose) => (
                 <div className="flex items-start gap-[140px] px-20 pt-20 pb-15">
@@ -136,7 +136,7 @@ export default function Header() {
               ));
             }}
           >
-            <span className="text-[10px] font-light">Ariza qoldiring</span>
+            <span className="text-[10px]  font-light 3xl:text-[9px]">Ariza qoldiring</span>
             <ChevronDown
               size={20}
               color="white"
@@ -149,25 +149,25 @@ export default function Header() {
         </div>
         {modal}
       </section>
-      <div className="bg-blue w-screen rotate-[17deg] h-96 absolute z-20 right-60 -bottom-80"></div>
-      <div className="bg-blue w-screen -rotate-[17deg] h-96 absolute z-20 left-60 -bottom-80"></div>
-      <section className=" text-white absolute z-20 -left-1/2 transform translate-x-1/2 top-[10%]">
-        <h1 className="text-[220px] mb-22">Oson va tez!</h1>
+      {/* <div className="bg-blue w-screen rotate-[17deg] h-96 absolute z-20 right-60 -bottom-80"></div>
+      <div className="bg-blue w-screen -rotate-[17deg] h-96 absolute z-20 left-60 -bottom-80"></div> */}
+      <section className=" text-white absolute z-20 left-[10%] transform  top-[15%]">
+        <h1 className="3xl:text-[170px] 3xl:mb-2  2xl:160px xl:text-150px ">Oson va tez!</h1>
         <div className="flex items-start gap-72 mb-14">
-          <p className="text-4xl font-medium w-[25%]">
+          <p className="3xl:text-2xl 2xl:text-2xl font-medium w-[25%]">
             iPost cargo — yukingiz biz bilan ishonchli yo‘lda!
           </p>
-          <p className="text-[22px] font-base w-[30%]">
+          <p className="text-[22px] font-base w-[30%] 3xl:text-[20px] 2xl:text-[18px] xl:text-[16px]">
             Biz – Xitoydan O‘zbekistonga tovarlar yetkazib berishga
             ixtisoslashgan cargo kompaniyasimiz.
           </p>
         </div>
         <div className="flex gap-5">
-          <Button variant="primary">
+          <Button className="3xl:h-[70px] 3xl:text-[14px]" variant="primary">
             <span> Profilga kirish</span>
             <MoveUpRight />
           </Button>
-          <Button variant="secondary">
+          <Button className="3xl:h-[70px] 3xl:text-[14px]" variant="secondary">
             <span>trek raqam qo&apos;shish</span>
              <MoveUpRight />
           </Button>
@@ -182,11 +182,12 @@ export default function Header() {
         <CarouselContent>
           {carouselItems.map((item, index) => (
             <CarouselItem key={index}>
-              <Image className="w-full object-contain" src={item} alt="" />
+              <Image className="w-full object-cover h-[1000px]" src={item} alt="" />
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
+      <Image src={BannerBottom} alt="Banner bottom" className="w-screen object-cover h-96 absolute z-20 left-0 bottom-[0%]"/>
     </header>
   );
 }

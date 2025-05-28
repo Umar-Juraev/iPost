@@ -4,7 +4,7 @@ import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+// import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -172,12 +172,12 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CarouselPrevious({
-  className,
-  variant = "outline",
-  size = "icon",
-  ...props
+  // className,
+  // variant = "outline",
+  // size = "icon",
+  // ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+  // const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
     <>
@@ -204,12 +204,12 @@ function CarouselPrevious({
 }
 
 function CarouselNext({
-  className,
-  variant = "outline",
-  size = "icon",
-  ...props
+  // className,
+  // variant = "outline",
+  // size = "icon",
+  // ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+  // const { orientation, scrollNext, canScrollNext } = useCarousel()
 
   return (
     <>

@@ -6,7 +6,7 @@ import BotQrcode from '@/components/shared/BotQrCode'
 import ArrowRight from "@/assets/svg/RightArrowBlue.svg"
 const BotInfoSection = () => {
   return (
-      <section className='w-full relative h-[586px] mt-[160px] mb-2.5 overflow-hidden'>
+      <section id='contact' className='w-full relative h-[586px] mt-[160px] mb-2.5 overflow-hidden'>
       <div className='w-full absolute right-[-10%] top-0 rounded-[79px] z-10 h-full  bg-[#0132C5] py-[100px] px-[160px]'>
         <div className='max-w-[680px]'>
           <h4 className='text-[63px] text-white font-medium leading-[110%]'>Barcha savol va takliflaringiz uchun
